@@ -1,141 +1,177 @@
-﻿* {
+* {
 	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
-/*-- thuộc tính toàn trang web --*/
-body {
-	font-family: "Times New Roman";
-	font-size: 18px;
-	text-align: center;
+
+html, body {
+	width: 100%;
+	height: auto;
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	width: auto;
+	font-size: 18px;
 }
-/*-- link a toàn trang web --*/
+/*-- style cơ bản toàn trang web --*/
+#container {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+img {
+	width: 25px;
+	height: 25px;
+}
+
 a {
 	text-decoration: none;
-	color: #3d3d29;
-	font-size: 0.85em;
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
-/*--container--*/
-#container {
-	position: relative;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-/*-- menu chung --*/
-.nav {
-	height: 50px;
-	width: auto;
-}
-
-.nav ul {
+ul {
 	list-style-type: none;
-	margin: 0;
-	margin-right: 0.5em;
-	margin-top: 0.7em;
-	padding: 0;
-	float: right;
 }
 
-.nav ul li {
+ul li {
 	display: inline-block;
 }
 
-.nav ul li a {
-	padding: 0.5em;
+/*-- style cho thanh menu trên cùng --*/
+#menu {
+	height: 60px;
+	width: auto;
+	background-color: #f2f2f2;
+	margin: 0;
+}
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 80px;
+	height: 40px;
+}
+#logo img {
+	width: 90px;
+	height: 40px;
+}
+#box-s {
+	position: absolute;
+	top: 10px;
+	left: 120px;
+}
+#box-s input {
+	width: 600px;
+	height: 35px;
+	border: 1px solid #e6e6e6;
+	padding: 10px;
 }
 
-/*-- item đầu tiên của menu trên cùng --*/
-#nav0 li:first-child {
-	color: #b8b894;
-	font-size: 0.8em;
+#box-s img:nth-child(2) {
+	position: absolute;
+	top: 5.5px;
+	right: 10px;
 }
-/*--hình đại diện --*/
+
+#box-s img:last-child {
+	height: 35px;
+	width: auto;
+	position: absolute;
+	top: 0px;
+	right: -35px;
+}
+
+#info {}
+
+#info ul {
+	float: right;
+}
+
+#info ul li {
+	margin-right: 15px;
+}
+
+#info ul li:first-child {
+	color: #b3b3b3;
+}
+
 #avatar {
 	border-radius: 100%;
 }
-/*--content--*/
-#content {
-	margin: 0;
-	padding: 0;
-	padding-bottom: 35px;
-}
-/*--content logo--*/
-#search {
-	padding-bottom: 90px;		// vấn đề ở đây
-	border: 1px solid black;
-}
-#logo {
-	margin-top: 100px;
-	margin-bottom: 30px;
-}
-/*--khung search --*/
-#srchtxt {
-	border: 1px solid #d9d9d9;
-	line-height: 2.3em;
-	width: 40%;
-}
-/*-- img key board --*/
-#kb {
-	position: relative;
-	right: 40px;
-	top: 9px;
-}
-/*--content button --*/
-.button {
-	width: auto;
-	height: 3em;
-	margin-top: 30px;
-	margin-right: 10px;
-	color: #808080;
-	border: none;
-	font-weight: bold;
-	background-color: #f2f2f2;
 
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-}
-
-.button:hover {
-	color: #333333;
-	border: 1px solid #bfbfbf;
-}
- /*--menu cuối--*/
-#footer {
- 	background-color: #e6e6e6;
-	position: absolute;
-	bottom: 0;
-	/*top: 640px;*/
-	height: 50px;
+/*--menu thứ 2--*/
+#menu-0 {
 	width: 100%;
-	font-size: 1.3em;
+	height: 40px;
+	border-bottom: 1px solid #b3b3b3;
 }
-/*thêm cái này vào*/
-html {
-    height: 100%;
+#submenu {
+	margin-left: 80px;
+	width: 60%;
 }
-body {
-    min-height: 100%;
-    position: relative;
+#submenu ul li {
+	margin-right: 17px;
+	font-size: 20px;
+}
+#submenu ul li a{
+	color: #737373;
+}
+#submenu ul li a:hover {
+	text-decoration: none;
+	color: #262626
+}
+#submenu ul li a:active {
+	font-weight: bold;
+	color: blue;
+	border-bottom: 3px solid blue;
+}
+/*-- menu bên phải*/
+#menu-r {
+	position: absolute;
+	top: 60px;
+	right: 30px;
+}
+/*-- nội dung tìm kiếm*/
+#content-search {
+	margin-left: 120px;
+	width: 50%;
+}
+#content-search p {
+	margin-top: 10px;
+	color: #737373;
+}
+/*-- box hình ảnh search --*/
+#box1 {
+	height: 200px;
+	border-bottom: 1px solid #b3b3b3;
+}
+#box1 img {
+	width: 22%;
+	height: 100px;
+	margin-right: 10px;
+}
+#box1 img:nth-child(6) {
+	margin-right: 0;
 }
 
-#nav1, #nav2 ul li{
-	border-right: 1px solid white;
+#box1 p:nth-child(2) {
+	font-size: 14px;
+	position: absolute;
+	left: 660px;
+	top: 165px;
 }
-
- #nav1 {
- 	float: left;
- }
-
-
-
+#box1 p a:last-child {
+	font-weight: 16px;
+	color: #3333ff;
+}
+/*-- box nội dung --*/
+.box h3 a {
+	color: #000099;
+	font-weight: normal;
+}
+.box p:nth-child(2){
+	font-weight: 16px;
+	color: #3333ff;
+}
